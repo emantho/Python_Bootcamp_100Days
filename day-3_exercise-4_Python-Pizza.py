@@ -1,27 +1,24 @@
 from os import system
-system('cls')
+system('clear')
 
 # 🚨 Don't change the code below 👇
 print("Welcome to Python Pizza Deliveries!")
-size = input("What size pizza do you want? S, M, or L ")
-add_pepperoni = input("Do you want pepperoni? Y or N ")
-extra_cheese = input("Do you want extra cheese? Y or N ")
+size = input("What size pizza do you want? S, M, or L ").lower()
+add_pepperoni = input("Do you want pepperoni? Y or N ").lower()
+extra_cheese = input("Do you want extra cheese? Y or N ").lower()
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
 bill = 0
-size = size.lower()
-add_pepperoni = add_pepperoni.lower()
-extra_cheese = extra_cheese.lower()
 
 if size == 's':
-    bill = 15
+    bill += 15
     print('')
 elif size == 'm':
-    bill = 20
+    bill += 20
     print()
 elif size == 'l':
-    bill = 25
+    bill += 25
     print()
 
 if size == 's':
