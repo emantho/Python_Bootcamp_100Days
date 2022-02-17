@@ -29,6 +29,6 @@ if loveScore < 10 or loveScore > 90:
     print(f"Your score is {loveScore}, you go together like coke and mentos.")
 
 elif 40 <= loveScore <= 50:
-    print(f"Your score is {loveScore}, you are already togeter.")
+    print(f"Your score is {loveScore}, you are alright together.")
 else:
     print(f"Your score is {loveScore}.")
