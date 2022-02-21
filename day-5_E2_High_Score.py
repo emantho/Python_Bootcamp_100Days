@@ -15,8 +15,8 @@ high_scores = 0
 for score in student_scores:
     if high_scores < score:
         high_scores = score
-    #print(score)
-print(high_scores)
+    
+print(f"The highest score in the class is: {high_scores}")
 
 
 
