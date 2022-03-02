@@ -1,57 +1,6 @@
 from os import system ; system("clear")
 import random
 
-# stages
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''','''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''','''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''','''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========
-''','''
-  +---+
-  |   |
-  O   |
- /    |
-      |
-      |
-=========
-''','''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''']
-
 
 # list of words to guess
 word_list = ['Ojo', 'Pizza', 'analfabeto', 'Angel', 'Enojado', 'Fuego']
