@@ -42,6 +42,9 @@ def player_card_list(card_lenght):
         player_card.append(picked_cards)
     return player_card
 
+
+
+
 # --------------END FUNCTIONS -------------------
 
 # -------------- START PROGRAM --------------------
