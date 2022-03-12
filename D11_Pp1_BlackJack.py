@@ -20,10 +20,12 @@ def card_choise(cards_to_choise):
 def total_played(played_cards):
     """Make a copy of the list of cards and extract each
     item to create a total of it"""
-    to_sum_cards = played_cards.copy()
+    
     total_sum = 0
-    for card in range(len(to_sum_cards)):
-        total_sum += to_sum_cards.pop()
+    
+    for card in (played_cards):
+        total_sum += card
+        
     return total_sum
 
 # Create list of cards of dealer
@@ -45,30 +47,84 @@ def player_card_list(card_lenght):
 
 
 
-# --------------END FUNCTIONS -------------------
+# -------------- END FUNCTIONS -------------------
 
 # -------------- START PROGRAM --------------------
-game_on = True
-while game_on:
+game_on = input("Do you want to play BlackJack, type 'y' or 'n' to exit: ")
+while True:
     
-    # Computing total
-    dealer_total = total_played(dealer_card)
-    player_total = total_played(player_card)
-    
-    # creating computer and player card list
-    dealer_card_list(dealer_card_lenght)
-    player_card_list(player_card_lenght)
+    dealer_card = []
+    dealer_total = 0
+    player_card = []
+    player_total = 0
+    dealer_card_lenght = 1
+    player_card_lenght = 2
+    hit = ""
+    while game_on == 'y':
+        
+        if game_on == 'y' and hit == 'y':
+            # Computing total
+            player_card_list(player_card_lenght)
+            player_total = total_played(player_card)
+            
+            # Mesagge of cards and scores
+            print(f"Your Cards: {player_card}, current score: {player_total}")
+            
+            if player_total <= 21:
+                hit = input("\nType 'y' to get another card, type 'n' to pass: ")       
 
-    
-    # Mesagge of cards and scores
-    print(f"Computer's first card: {dealer_card}")
-    print(f"Your Cards: {player_card}, current score: {player_total}")
-
-    # asking player to hit
-    hit = input("Type 'y' to get another card, type 'n' to pass: ")
-    if hit == 'y':
-        print()
+            else:
+                hit = 'n'
+                game_on = ''
+                print("\nYOU LOSE\n")
 
 
- # print(f"Computer's first card: {dealer_card}, current score: {dealer_total}")
-# print(f"Your Cards: {player_card}, current score: {player_total}")
+        elif game_on == 'y' and hit == 'n':
+            while dealer_total <= 21:
+                
+                dealer_card_list(dealer_card_lenght)
+                dealer_total = total_played(dealer_card)
+                
+                if player_total < dealer_total and 17 <= dealer_total <= 21:
+                    print(f"Computer's cards: {dealer_card}, current score: {dealer_total}")
+                    hit = 'n'
+                    game_on = ''
+                    print("\nYOU LOSE\n")
+                    break   
+                
+                elif dealer_total == player_total:
+                    hit = 'n'
+                    game_on = ''
+                    print("\nIS A DRAW\n")
+                    break
+
+                elif dealer_total > 21:
+                    print(f"Computer's cards: {dealer_card}, current score: {dealer_total}")
+                    hit = 'n'
+                    game_on = ''
+                    print("\nYOU WIN\n")
+                    break
+
+        elif game_on == 'y':
+            # computing computer game
+            dealer_card_list(dealer_card_lenght)
+            dealer_total = total_played(dealer_card)
+
+            # Computing total
+            player_card_list(player_card_lenght)
+            player_total = total_played(player_card)
+
+
+            # Mesagge of cards and scores
+            print(f"Computer's first card: {dealer_card}")
+            print(f"Your Cards: {player_card}, current score: {player_total}")
+
+            # asking player to hit
+            hit = input("\nType 'y' to get another card, type 'n' to pass: ")
+            if hit == 'y':
+                player_card_lenght = 1
+
+    game_on = input("Do you want to play again, type 'y' or 'n' to exit: ")
+    if game_on == 'n':
+        print("Goodbye")
+        break
