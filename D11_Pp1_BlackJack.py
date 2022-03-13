@@ -1,5 +1,5 @@
 from os import system ; system("clear")
-from D10_art import logo
+from D11_art import logo
 import random
 
 cards = [11,2,3,4,5,6,7,8,9,10,10,10,10]
@@ -51,8 +51,9 @@ def player_card_list(card_lenght):
 
 # -------------- START PROGRAM --------------------
 game_on = input("Do you want to play BlackJack, type 'y' or 'n' to exit: ")
+system("clear")
 while True:
-    
+    print(logo)
     dealer_card = []
     dealer_total = 0
     player_card = []
@@ -125,6 +126,7 @@ while True:
                 player_card_lenght = 1
 
     game_on = input("Do you want to play again, type 'y' or 'n' to exit: ")
+    system("clear")
     if game_on == 'n':
         print("Goodbye")
         break
