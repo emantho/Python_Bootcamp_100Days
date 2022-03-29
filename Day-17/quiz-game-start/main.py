@@ -1,4 +1,6 @@
-from os import system; system("clear")
+from os import system
+
+from quiz_brain import QuizBrain; system("clear")
 from question_model import Question
 from data import question_data
 
@@ -11,5 +13,4 @@ for question in question_data:
 
 print(question_bank[0].text)
 
-
-
+QuizBrain(question_bank)
