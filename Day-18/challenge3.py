@@ -11,9 +11,19 @@ import random
 eder = Turtle()
 
 
-colors = ["dark gray","black","deep sky blue","lime green","firebrick","red","purple","yellow"]
+colors = [
+    "dark gray",
+    "black",
+    "deep sky blue",
+    "lime green",
+    "firebrick",
+    "red",
+    "purple",
+    "yellow",
+]
 
-def draw_shape(num_angles): 
+
+def draw_shape(num_angles):
     angles = 3
     while True:
         giro_Angle = 360 / angles
@@ -24,6 +34,7 @@ def draw_shape(num_angles):
         angles += 1
         if angles == num_angles:
             break
+
 
 draw_shape(20)
 

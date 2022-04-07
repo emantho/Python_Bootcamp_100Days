@@ -1,11 +1,11 @@
 import random
 
 # import my module
-#import my_module
-#print(my_module.pi)
+# import my_module
+# print(my_module.pi)
 
 # random integer
-random_integer = random.randint(1,10)
+random_integer = random.randint(1, 10)
 print(random_integer)
 
 # ranodm float

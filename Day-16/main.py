@@ -1,4 +1,6 @@
-from os import system; system("clear")
+from os import system
+
+system("clear")
 from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
@@ -24,19 +26,18 @@ while is_on:
         money_machine.report()
     elif user_choice == "off":
         print("GoodBye")
-    else: 
+    else:
         # TODO-2 -> check sufficient ingredients
         drink = coffee_menu.find_drink(option)
         # TODO-3 process coins $ Check transactions successful
-        if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
+        if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(
+            drink.cost
+        ):
             coffee_maker.make_coffee(drink)
-            
-            
-
 
 
 # elif user_choice == "espresso" or user_choice == "latte" or user_choice == "cappuccino":
 #     sufficient = coffee_machine.is_resource_sufficient(user_choice)
 #     print(sufficient)
-    # if sufficient:
-    #     
+# if sufficient:
+#

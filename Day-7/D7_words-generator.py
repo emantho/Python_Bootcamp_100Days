@@ -1,5 +1,7 @@
-from os import system ; system("clear")
-noEdited = '''
+from os import system
+
+system("clear")
+noEdited = """
 Ángel
 Ojo
 Pizza
@@ -151,17 +153,17 @@ Monja
 Zombi
 Juego
 Pirata
-'''
+"""
 noEdited = noEdited.split("\n")
 
 wordsNoSpaces = ""
 for w in noEdited:
     wordsNoSpaces += w + ","
 
-#print(wordsNoSpaces)
+# print(wordsNoSpaces)
 
 wordsNoSpaces = wordsNoSpaces.split(" ")
-#print(wordsNoSpaces)
+# print(wordsNoSpaces)
 
 edited = ""
 for w in wordsNoSpaces:
@@ -171,5 +173,3 @@ finalWords = edited.split(",")
 print(finalWords)
 
 finalWords = list(set(finalWords))
-
-

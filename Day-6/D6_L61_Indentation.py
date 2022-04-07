@@ -1,6 +1,9 @@
-from os import system; system("clear")
+from os import system
+
+system("clear")
 
 sky = ""
+
 
 def my_function():
     # indentation of function
@@ -11,6 +14,7 @@ def my_function():
         # indentation of elif
         print("grey")
     print("Hello")
-# indentation at the root 
-print("World")
 
+
+# indentation at the root
+print("World")

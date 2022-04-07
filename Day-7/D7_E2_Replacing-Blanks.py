@@ -1,7 +1,7 @@
 # from os import system ; system("clear")
 import random
 
-word_list = ['Ojo', 'Pizza', 'analfabeto', 'Angel', 'Enojado', 'Fuego']
+word_list = ["Ojo", "Pizza", "analfabeto", "Angel", "Enojado", "Fuego"]
 
 # TODO-1 - Radomly choose a word from the word_list and assing it to a variable called chosen_word.
 chosen_word = random.choice(word_list)
@@ -18,8 +18,8 @@ for _ in range(len(chosen_word)):
 guess = input("Write a letter to guess the word: ").lower()
 
 # TODO-3 - Check if the letter the user guessed (guess) in one of the letter in the chosen_word
-    # replacing empty spaces
-chosen_word = list(chosen_word) # string to list
+# replacing empty spaces
+chosen_word = list(chosen_word)  # string to list
 word_count = chosen_word.count(guess)
 
 for wc in range(word_count):

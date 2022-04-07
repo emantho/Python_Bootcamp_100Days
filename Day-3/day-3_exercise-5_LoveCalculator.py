@@ -1,6 +1,7 @@
 from os import system
-system('clear')
-#system("cls")
+
+system("clear")
+# system("cls")
 
 # 🚨 Don't change the code below 👇
 print("Welcome to the Love Calculator!")
@@ -8,8 +9,8 @@ name1 = input("What is your name? \n").lower()
 name2 = input("What is their name? \n").lower()
 # 🚨 Don't change the code above 👆
 
-#Write your code below this line 👇
-true = 0 
+# Write your code below this line 👇
+true = 0
 love = 0
 
 combined = name1 + name2

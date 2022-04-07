@@ -1,9 +1,11 @@
 from os import system
 
-from quiz_brain import QuizBrain; system("clear")
+from quiz_brain import QuizBrain
+
+system("clear")
 from question_model import Question
 from data import question_data
-from quiz_brain import QuizBrain 
+from quiz_brain import QuizBrain
 
 # TODO-2 Creating list objects -> creating question bank
 question_bank = []

@@ -1,12 +1,13 @@
 from os import system
+
 system("clear")
-system('cls')
+system("cls")
 
 # 🚨 Don't change the code below 👇
 year = int(input("Which year do you want to check? "))
 # 🚨 Don't change the code above 👆
 
-#Write your code below this line 👇
+# Write your code below this line 👇
 
 if year % 4 == 0:
     if year % 100 == 0:
@@ -16,6 +17,5 @@ if year % 4 == 0:
             print("Not leap year")
     else:
         print("Leap Year")
-else: 
+else:
     print(f"Not Leap Year")
-

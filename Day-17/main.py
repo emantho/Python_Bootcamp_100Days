@@ -1,23 +1,29 @@
-from os import system; system("clear")
-# Class is a blueprint
-class User: # All classes use Pascal Case; All words are capitalize
-    
-#HINT
-# PascalCase -> All words init with upper case
-# camelCase  -> Second and more words are upper case
-# snake_case -> All words are lower case but separated by underscore
+from os import system
 
-## Constructor or initialize
+system("clear")
+# Class is a blueprint
+class User:  # All classes use Pascal Case; All words are capitalize
+
+    # HINT
+    # PascalCase -> All words init with upper case
+    # camelCase  -> Second and more words are upper case
+    # snake_case -> All words are lower case but separated by underscore
+
+    ## Constructor or initialize
     # Creating atributes
 
-    def __init__(self, user_id, username) -> None: # This method allows add and create atributes using the init function
+    def __init__(
+        self, user_id, username
+    ) -> None:  # This method allows add and create atributes using the init function
         self.id = user_id
         self.username = username
-        self.followers = 0 # This value is 0 by default and user doesn't change this when initialize
+        self.followers = (
+            0  # This value is 0 by default and user doesn't change this when initialize
+        )
         self.following = 0
 
     def follow(self, user):
-        user.followers += 1       
+        user.followers += 1
         self.following += 1
 
 

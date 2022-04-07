@@ -1,4 +1,5 @@
 from os import system
+
 system("clear")
 
 fruits = ["Apple", "Peach", "Pear"]

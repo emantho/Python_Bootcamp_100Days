@@ -4,21 +4,24 @@ import random
 
 system("Clear")
 
+
 def random_number():
-    to_guess = random.randint(1,100)
+    to_guess = random.randint(1, 100)
     return to_guess
 
-def game_dificult(user_difficulty):     
+
+def game_dificult(user_difficulty):
     if user_difficulty == "easy":
         attemps = 10
         return attemps
     elif user_difficulty == "hard":
         attemps = 5
         return attemps
-    
+
+
 # main program start
-new_game = 'y'
-while new_game == 'y':
+new_game = "y"
+while new_game == "y":
     system("clear")
     user_attemps = 0
 
@@ -28,12 +31,14 @@ while new_game == 'y':
 
     while True:
         user_diff_chosed = input("Choose a difficulty. Type 'easy' or 'hard': ")
-        if user_diff_chosed != 'easy' and user_diff_chosed != 'hard':
+        if user_diff_chosed != "easy" and user_diff_chosed != "hard":
             print(f"{user_diff_chosed} That's not an option")
         else:
             break
-            
-    attemps_message = print(f"You have {game_dificult(user_diff_chosed)} attemps remaining to guess the number.")
+
+    attemps_message = print(
+        f"You have {game_dificult(user_diff_chosed)} attemps remaining to guess the number."
+    )
     inner_game = True
     to_guess = random_number()
 
@@ -52,8 +57,8 @@ while new_game == 'y':
                 print("Too low")
             elif user_guess > to_guess:
                 print("Too high")
-            
+
     new_game = input("Wanna play again? Type 'y' or 'n': ")
-    if new_game == 'n':
+    if new_game == "n":
         break
 # main program end

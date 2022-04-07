@@ -18,9 +18,5 @@ ed.forward(100)
 #     emi_the_turtle.right(90)
 
 
-
-
-
-
 screen = Screen()
 screen.exitonclick()

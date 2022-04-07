@@ -1,17 +1,22 @@
-from os import system; system("clear")
+from os import system
+
+system("clear")
 
 
 # Addition
 def add(n1, n2):
     return n1 + n2
 
+
 # Substract
 def substract(n1, n2):
     return n1 - n2
 
+
 # Multiply
 def multiply(n1, n2):
     return n1 * n2
+
 
 # Divide
 def divide(n1, n2):
@@ -20,19 +25,14 @@ def divide(n1, n2):
     else:
         return f"Cannot divide by Zero"
 
-operations = {
-    "+" : add, 
-    "-" : substract,
-    "*" : multiply,
-    "/" : divide
-}
+
+operations = {"+": add, "-": substract, "*": multiply, "/": divide}
 
 # Program start
 num1 = int(input("What is the first number?: "))
 
 for operation in operations:
-    print(f"{operation}",end=" ")
-
+    print(f"{operation}", end=" ")
 
 
 operation_choise = input("\nPick an operation from the line above: ")
@@ -44,8 +44,10 @@ first_answer = operation_function(num1, num2)
 
 print(f"{num1} {operation_choise} {num2} = {first_answer}")
 
-# Continuing operations 
-continue_calculation = input(f"\nType 'y' to continue calculation with {first_answer}, or type 'n' to exit.: ")
+# Continuing operations
+continue_calculation = input(
+    f"\nType 'y' to continue calculation with {first_answer}, or type 'n' to exit.: "
+)
 
 while continue_calculation == "y":
     operation_choise = input("\nPick another operation: ")
@@ -57,4 +59,6 @@ while continue_calculation == "y":
 
     print(f"{first_answer} {operation_choise} {num3} = {second_answer}")
 
-    continue_calculation = input(f"\nType 'y' to continue calculation with {first_answer}, or type 'n' to exit.: ")
+    continue_calculation = input(
+        f"\nType 'y' to continue calculation with {first_answer}, or type 'n' to exit.: "
+    )

@@ -1,9 +1,8 @@
-
 dictionaries_structure = {"key": "value"}
 
 programming_dictionary = {
- "Bug": "An error in a program that prevents the program from running as expected.",
- "Function": "A piece of code that you can easily call over and over again."
+    "Bug": "An error in a program that prevents the program from running as expected.",
+    "Function": "A piece of code that you can easily call over and over again.",
 }
 
 # Retrieving items from dictionary.
@@ -32,27 +31,27 @@ print(f"This form prints {programming_dictionary.items()}")
 
 travel_log_list = {
     "France": ["Paris", "Lille", "Guijon"],
-    "Germany": ["Berlin", "Hamburg", "Stuttgart"]
+    "Germany": ["Berlin", "Hamburg", "Stuttgart"],
 }
 
 travel_log_dict = {
-    "France": {"cities_visited" : ["Paris", "Lille", "Guijon"], "total_visits": 12 },
-    "Germany": {"cities_visited" : ["Berlin", "Hamburg", "Stuttgart"], "total_visits": 5 }
+    "France": {"cities_visited": ["Paris", "Lille", "Guijon"], "total_visits": 12},
+    "Germany": {
+        "cities_visited": ["Berlin", "Hamburg", "Stuttgart"],
+        "total_visits": 5,
+    },
 }
 
 # Nesting Dictionary in a list
 travel_log_dict = [
     {
-    "Country" : "France", 
-    "cities_visited" : ["Paris", "Lille", "Guijon"], 
-    "total_visits": 12 
+        "Country": "France",
+        "cities_visited": ["Paris", "Lille", "Guijon"],
+        "total_visits": 12,
     },
     {
-    "Country" : "Germany", 
-    "cities_visited" : ["Berlin", "Hamburg", "Stuttgart"], 
-    "total_visits": 5 
-    }
+        "Country": "Germany",
+        "cities_visited": ["Berlin", "Hamburg", "Stuttgart"],
+        "total_visits": 5,
+    },
 ]
-
-
-

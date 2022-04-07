@@ -1,4 +1,3 @@
-
 # importing module turtle
 import turtle
 
@@ -9,6 +8,7 @@ timmy = turtle.Turtle()
 
 # importing Turtle class directly from turtle module
 from turtle import Turtle, Screen
+
 emi = Turtle()
 print(emi)
 emi.shape("turtle")
@@ -25,5 +25,3 @@ print(my_screen.canvheight)
 
 # object > method
 my_screen.exitonclick()
-
-
