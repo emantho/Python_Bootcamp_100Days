@@ -1,5 +1,4 @@
-
-# Variable cannot begin with numbers 
+# Variable cannot begin with numbers
 # Variables cannot have spaces between letters, use _
 # Don't user restricted name as input, print or if
 
