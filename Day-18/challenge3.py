@@ -4,7 +4,6 @@
 # angle is given by formule = 360° / shape size
 # example: 360 / 4 = 90 or 360 / 5 = 72
 
-from secrets import choice
 from turtle import Turtle, Screen
 import random
 
@@ -27,7 +26,7 @@ def draw_shape(num_angles):
     angles = 3
     while True:
         giro_Angle = 360 / angles
-        eder.color(choice(colors))
+        eder.color(random.choice(colors))
         for i in range(angles):
             eder.forward(50)
             eder.rt(giro_Angle)
