@@ -11,7 +11,7 @@ screen.tracer(0)
 screen.title("My Snake Game")
 
 snake = Snake()
-snake.speed()
+
 
 screen.listen()
 screen.onkey(snake.up, "Up")
