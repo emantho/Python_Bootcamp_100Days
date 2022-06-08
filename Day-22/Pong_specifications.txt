@@ -1,0 +1,33 @@
+Classes
+-------
+- screen
+	- Characterictics 
+		- Color: black
+		- Size: 1000 x 600 pixels
+		- Title: My Pong Game
+- Player 1
+	- Characterictics
+		- Name: Player 1
+		- Shape: Rectangle
+		- Color: White
+		- Dimensions: 40 pixels width x 10% screen heigh
+		- position: Screen left side -490
+	 - Movement 
+		- Only in Y axis, between -590 and 590
+
+
+- Player 2
+	- Characterictics
+		- Name: Player 2
+		- Shape: Rectangle
+		- Color: White
+		- Dimensions: 40 pixels width x 10% screen heigh
+		- position: Screen left side -490
+	 - Movement 
+		- Only in Y axis, between -590 and 590
+		
+- Ball, movement on screen
+	- Detect collision with wall and bounce
+- Detect colission with player
+- Detect player missing 
+- Scoreboard
