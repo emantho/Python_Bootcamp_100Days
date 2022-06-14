@@ -1,29 +1,30 @@
 from turtle import Turtle
 
-STARTING_POSITION = [(485, 0), (-485, 0)]
-UP = 90
-DOWN = 270
+POD_STEP = 20
+
+class Pod(Turtle):
+    def __init__(self, position):
+        super().__init__()
+        # self.shape("square")
+        # self.color("white")
+        # self.penup()
+        # self.shapesize(stretch_wid=5, stretch_len=1)
+        # self.goto(position)
+        self.create_pod(position)
 
 
-class Pod():
-    def __init__(self):
-        self.positionate_pod()
-
-    def positionate_pod(self):
-        for position in STARTING_POSITION:
-            self.create_pod(position)
-
-    def create_pod(self, position):
-        self.pod = Turtle()
-        self.pod.shape("square")
-        self.pod.color("white")
-        self.pod.penup()
-        self.pod.shapesize(stretch_wid=3, stretch_len=0.3, outline=8)
-        self.pod.goto(position)
+    def create_pod(self,position):
+        self.shape("square")
+        self.color("white")
+        self.penup()
+        self.shapesize(stretch_wid=5, stretch_len=1)
+        self.goto(position)
+        
 
     def move_up(self):
-        self.pod.forward(10)
-        # self.pod.setheading(UP)
+        new_y = self.ycor() + POD_STEP
+        self.goto(self.xcor(), new_y)
 
     def move_down(self):
-        self.pod.setheading(DOWN)
+        new_y = self.ycor() - POD_STEP
+        self.goto(self.xcor(), new_y)
