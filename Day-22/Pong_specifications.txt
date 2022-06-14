@@ -26,8 +26,13 @@ Classes
 	 - Movement 
 		- Only in Y axis, between -590 and 590
 		
-- Ball, movement on screen
-	- Detect collision with wall and bounce
-- Detect colission with player
+- Ball creation 
+	- Movement in 45° only 
+	
+- Ball detect collision with wall and bounce
+
+- Ball detect colission with player and bounce
+
 - Detect player missing 
+
 - Scoreboard
