@@ -19,7 +19,7 @@ class Player(Turtle):
         self.setheading(90)
         self.restart()
 
-    def move(self):
+    def move_up(self):
         self.forward(MOVE_DISTANCE)
 
     def restart(self):
