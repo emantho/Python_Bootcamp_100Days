@@ -27,9 +27,11 @@ while game_is_on:
     car_manager.create_car()
     car_manager.move_cars()
 
+    # Detect succesful crossing
     if player.ycor() > 280:
         player.restart()
         scoreboard.level_up()
+        car_manager.level_up()
 
     # Detect car collision
     for car in car_manager.cars:  # Looping throught the list cars
