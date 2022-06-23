@@ -3,12 +3,22 @@ from turtle import Turtle
 ALINGMENT = "center"
 FONT = ("Courier", 12, 'bold')
 
+# Scoreboard modified to track high score
+# TODO 1 - Add a High_score variable
+# TODO 2 - Modifi game_over function to reset game
+# TODO 3 - write a file with high score value
+
+with open("data.txt") as data:
+    content = int(data.read())
+
 
 class Scoreboard(Turtle):
 
     def __init__(self, ):
         super().__init__()
         self.score = 0
+        #self.high_score = 0
+        self.high_score = content
         self.penup()
         self.color("white")
         self.goto(0, 280)
@@ -16,15 +26,21 @@ class Scoreboard(Turtle):
         self.hideturtle()
 
     def update_scoreboard(self):
-        self.write(arg=f"Score = {self.score}",
+        self.clear()
+        self.write(arg=f"Score = {self.score} High Score = {self.high_score}",
                    move=False, align=ALINGMENT, font=FONT)
 
-    def game_over(self):
-        self.goto(0, 0)
-        self.write(arg="GAME OVER",
-                   move=False, align=ALINGMENT, font=FONT)
+    def reset(self):
+        if self.score > self.high_score:
+            self.high_score = self.score
+        self.score = 0
+        self.update_scoreboard()
+
+    # def game_over(self):
+    #     self.goto(0, 0)
+    #     self.write(arg="GAME OVER",
+    #                move=False, align=ALINGMENT, font=FONT)
 
     def increase_score(self):
         self.score += 1
-        self.clear()
         self.update_scoreboard()
