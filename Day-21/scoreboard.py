@@ -8,17 +8,20 @@ FONT = ("Courier", 12, 'bold')
 # TODO 2 - Modifi game_over function to reset game
 # TODO 3 - write a file with high score value
 
-with open("data.txt") as data:
-    content = int(data.read())
+
+# with open("data.txt") as data:
+#     content = int(data.read())
+
 
 
 class Scoreboard(Turtle):
 
-    def __init__(self, ):
+    def __init__(self):
         super().__init__()
         self.score = 0
         #self.high_score = 0
-        self.high_score = content
+        with open("data.txt") as data:
+            self.high_score =  int(data.read())
         self.penup()
         self.color("white")
         self.goto(0, 280)
@@ -44,3 +47,5 @@ class Scoreboard(Turtle):
     def increase_score(self):
         self.score += 1
         self.update_scoreboard()
+
+# %%
